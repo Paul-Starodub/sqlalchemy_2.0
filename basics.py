@@ -2,7 +2,8 @@ from sqlalchemy import create_engine, text, MetaData, Table, Column, Integer, St
 from sqlalchemy.orm import Session
 
 
-engine = create_engine("sqlite:///mydatabase.db", echo=True)
+# engine = create_engine("sqlite:///mydatabase.db", echo=True)
+engine = create_engine("postgresql+psycopg://postgres:postgres@localhost:5432/satutorialdatabase", echo=True)
 #
 #
 # conn = engine.connect()
