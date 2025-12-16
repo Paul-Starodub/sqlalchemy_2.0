@@ -29,3 +29,9 @@ people = Table(
 )
 
 metadata.create_all(engine)
+
+conn = engine.connect()
+
+insert_stmt = people.insert().values(name="Max", age=30)
+result = conn.execute(insert_stmt)
+conn.commit()
